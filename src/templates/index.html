@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Editor</title>
+    <script src="/static/htmx.min.js"></script>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+
+    <div class="m-10">
+        <form hx-post="/upload" hx-encoding="multipart/form-data" hx-swap="none"
+            class="flex flex-col gap-4">
+            <!-- <input placeholder="Enter imgur link" type="text" name="link" class="p-3 rounded-md shadow-md"> -->
+            <input type="file" accept="image/png,image/jpeg" name="upload" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+</html>
