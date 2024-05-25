@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Editor</title>
+    <script src="/static/htmx.min.js"></script>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body class="h-lvh max-h-lvh flex flex-col">
+
+    {% include 'header.html' %}
+
+
+    <div class="flex-1 flex flex-row items-stretch">
+
+        <!-- Sidebar -->
+        <div>
+            <form class="grid grid-cols-2 p-4">
+                <label for="filename" class="font-semibold">Filename</label>
+                <input id="filename" name="filename" type="text" value="{{filename}}" readonly>
+
+                <label></label>
+
+            </form>
+        </div>
+
+        <div class="bg-slate-500 flex-1">
+            <img src="/img/{{filename}}" hx-on="click" hx-post="/edit/{{filename}}" class="object-cover max-h-full">
+
+        </div>
+
+    </div>
+
+    <!-- <div class="flex flex-row h-full">
+        Sidebar
+        <div class="outline outline-red-500">
+
+            <form class="grid grid-cols-2 p-4">
+                <label for="filename" class="font-semibold">Filename</label>
+                <input id="filename" name="filename" type="text" value="{{filename}}" readonly>
+
+                <label></label>
+
+            </form>
+
+        </div>
+
+
+
+    </div> -->
+
+
+
+
+</body>
+</html>
